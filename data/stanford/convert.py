@@ -6,25 +6,23 @@ from typing import Callable, Iterable
 node_mapping = {}
 lowest = 0
 
-def continous_grouping(row, ret) -> list[str]:
+def continous_grouping(row:list) -> Iterable[Iterable]:
     global node_mapping, lowest
     if row is None or len(row) == 0:
         return []
-    # first iteration
-    node = row[0]
-    info = node_mapping.get(node)
-    if info is None:
-        info = {
-            'num': lowest,
-            'lst_pos': len(ret)
-        }
-        lowest += 1
-        node_mapping[node] = info
-    else:
-        info['lst_pos'] += 1
-    lst_pos = info['lst_pos']
-    ret.insert(lst_pos, row)
-    return ret
+    # sort by the first node
+    row.sort(key=lambda elem:int(elem[0]))
+    for nodes in row:
+        node = nodes[0]
+        info = node_mapping.get(node)
+        if info is None:
+            info = {
+                'num': lowest,
+                'lst_pos': -1 # does not matter anymore
+            }
+            lowest += 1
+            node_mapping[node] = info
+    return row
 
 def continous_mapping(row) -> list[str]:
     global node_mapping, lowest
@@ -48,13 +46,16 @@ def regroup_csv(csvpath:str) -> Iterable[Iterable]:
     with open(csvpath, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
         for row in csv_reader:
-            out = continous_grouping(row, out)
-    return out
+            if len(row) == 0:
+                continue
+            out.append(row)
+    return continous_grouping(out)
 
 def remap_csv(data_rows:Iterable[Iterable]) -> Iterable[Iterable]:
     out = []
     for row in data_rows:
         out.append(continous_mapping(row))
+    out.sort(key=lambda elem:tuple(elem))
     return out
 
 def write_csv(outpath:str, data_rows:Iterable[Iterable]):
