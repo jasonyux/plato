@@ -1,12 +1,16 @@
 #!/bin/bash
 
-MAIN="./bazel-bin/example/pagerank" # process name
+CUR_DIR=$(realpath $(dirname $0))
+ROOT_DIR=$(realpath $CUR_DIR/..)
+cd $ROOT_DIR
+
+MAIN="$ROOT_DIR/bazel-bin/example/pagerank" # process name
 
 WNUM=4
 WCORES=4
 
-INPUT=${INPUT:='hdfs://cluster1/user/zhangsan/data/graph/raw_graph_10_9.csv'}
-OUTPUT=${OUTPUT:='hdfs://cluster1/user/zhangsan/pagerank_raw_graph_10_9'}
+INPUT=${INPUT:='hdfs://100.109.192.161:9000/user/plato/data/v100_e2150_ua_c3.csv'}
+OUTPUT=${OUTPUT:='hdfs://100.109.192.161:9000/user/plato/v100_e2150_ua_c3'}
 NOT_ADD_REVERSED_EDGE=${NOT_ADD_REVERSED_EDGE:=true}  # let plato auto add reversed edge or not
 
 ALPHA=-1
@@ -16,10 +20,7 @@ EPS=${EPS:=0.0001}
 DAMPING=${DAMPING:=0.85}
 ITERATIONS=${ITERATIONS:=100}
 
-export MPIRUN_CMD=${MPIRUN_CMD:='/opt/mpich-3.2.1/bin/mpiexec.hydra'}
-export JAVA_HOME=${APP_JAVA_HOME:='/opt/jdk1.8.0_211'}
-export HADOOP_HOME=${APP_HADOOP_HOME:='/opt/hadoop-2.7.4'}
-export HADOOP_CONF_DIR="${HADOOP_HOME}/etc/hadoop"
+export MPIRUN_CMD=${MPIRUN_CMD:="$ROOT_DIR/3rd/mpich/bin/mpiexec.hydra"}
 
 PARAMS+=" --threads ${WCORES}"
 PARAMS+=" --input ${INPUT} --output ${OUTPUT} --is_directed=${NOT_ADD_REVERSED_EDGE}"
@@ -32,7 +33,8 @@ export LD_LIBRARY_PATH=${JAVA_HOME}/jre/lib/amd64/server:${LD_LIBRARY_PATH}
 export CLASSPATH=${HADOOP_HOME}/etc/hadoop:`find ${HADOOP_HOME}/share/hadoop/ | awk '{path=path":"$0}END{print path}'`
 export LD_LIBRARY_PATH="${HADOOP_HOME}/lib/native":${LD_LIBRARY_PATH}
 
-chmod 777 ./${MAIN}
-${MPIRUN_CMD} -n ${WNUM} ./${MAIN} ${PARAMS}
-exit $?
+HOSTS="$ROOT_DIR/scripts/hosts" # hostfile with ips
 
+chmod 777 ${MAIN}
+${MPIRUN_CMD} -n ${WNUM} -f ${HOSTS} ${MAIN} ${PARAMS}
+exit $?
