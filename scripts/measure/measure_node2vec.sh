@@ -64,7 +64,7 @@ run_single()
 {
     local HOST_NUM=$1
     config_hosts $HOST_NUM
-    LOG_FILE="$ROOT_DIR/scripts/log/${INCSV}.n2v.${HOST_NUM}.${ITERATIONS}.log"
+    LOG_FILE="$ROOT_DIR/scripts/log/${INCSV}.n2v.${HOST_NUM}.${EPOCH}.log"
     run_n2v > $LOG_FILE 2>&1
     grep_performance
 }

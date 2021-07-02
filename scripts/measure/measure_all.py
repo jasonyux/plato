@@ -1,4 +1,9 @@
 from task import Task
+from tasks.closeness import ClosenessTask
+from tasks.fastunfolding import FastUnfoldTask
+from tasks.kcore import KcoreTask
+from tasks.lpa import LPATask
+from tasks.node2vec import Node2VecTask
 from tasks.pagerank import PageRankTask
 
 def numeric_average(infos:list):
@@ -30,14 +35,22 @@ def measure_single(task:Task, tries=3):
         performances = task.extract_perf(ret)
         group_len = len(performances)
         tmp += performances
-        print(performances)
     for i in range(group_len):
         out.append(numeric_average(tmp[i::group_len]))
     print(out)
     return out
 
 if __name__ == "__main__":
+    out = []
     Tasks = [
-        PageRankTask()
+        PageRankTask(),
+        Node2VecTask(),
+        LPATask(),
+        KcoreTask(),
+        FastUnfoldTask(),
+        ClosenessTask()
     ]
-    measure_single(Tasks[0])
+    for task in Tasks:
+        out += measure_single(task)
+    print("-----")
+    print(out)
