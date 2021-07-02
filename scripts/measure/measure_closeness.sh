@@ -6,15 +6,13 @@ cd $ROOT_DIR
 
 INCSV=${INCSV:='twitter_cont'}
 INPUT="hdfs://100.109.192.161:9000/user/plato/data/${INCSV}.csv"
-OUTPUT="hdfs://100.109.192.161:9000/user/plato/${INCSV}_pagerank"
+OUTPUT="hdfs://100.109.192.161:9000/user/plato/${INCSV}_cnc"
 
 # program config
-EPS=${EPS:=0.00001}
-DAMPING=${DAMPING:=0.85}
-ITERATIONS=1000
 NOT_ADD_REVERSED_EDGE=${NOT_ADD_REVERSED_EDGE:=true}  # let plato auto add reversed edge or not
 PART_BY_IN=false
 ALPHA=-1
+NUM_SAMPLES=1000
 
 # mpi related
 WNUM=4
@@ -28,15 +26,15 @@ export LD_LIBRARY_PATH=${JAVA_HOME}/jre/lib/amd64/server:${LD_LIBRARY_PATH}
 export CLASSPATH=${HADOOP_HOME}/etc/hadoop:`find ${HADOOP_HOME}/share/hadoop/ | awk '{path=path":"$0}END{print path}'`
 export LD_LIBRARY_PATH="${HADOOP_HOME}/lib/native":${LD_LIBRARY_PATH}
 
-run_pagerank()
+run_cnc()
 {
-    MAIN="$ROOT_DIR/bazel-bin/example/pagerank" # process name
+    MAIN="$ROOT_DIR/bazel-bin/example/cnc_simple" # process name
 
     export MPIRUN_CMD=${MPIRUN_CMD:="$ROOT_DIR/3rd/mpich/bin/mpiexec.hydra"}
 
     PARAMS+=" --threads ${WCORES}"
     PARAMS+=" --input ${INPUT} --output ${OUTPUT} --is_directed=${NOT_ADD_REVERSED_EDGE}"
-    PARAMS+=" --iterations ${ITERATIONS} --eps ${EPS} --damping ${DAMPING}"
+    PARAMS+=" --num_samples ${NUM_SAMPLES}"
 
     chmod 777 ${MAIN}
     ${MPIRUN_CMD} -n ${WNUM} -hosts ${HOSTS} ${MAIN} ${PARAMS}
@@ -45,7 +43,7 @@ run_pagerank()
 grep_performance()
 {
     echo $LOG_FILE
-    cat $LOG_FILE | grep "iteration done" -A 7
+    tail -n 2 $LOG_FILE
 }
 
 config_hosts()
@@ -67,8 +65,8 @@ run_single()
 {
     local HOST_NUM=$1
     config_hosts $HOST_NUM
-    LOG_FILE="$ROOT_DIR/scripts/log/${INCSV}.pagerank.${HOST_NUM}.${ITERATIONS}.log"
-    run_pagerank > $LOG_FILE 2>&1
+    LOG_FILE="$ROOT_DIR/scripts/log/${INCSV}.cnc.${HOST_NUM}.${NUM_SAMPLES}.log"
+    run_cnc > $LOG_FILE 2>&1
     grep_performance
 }
 
