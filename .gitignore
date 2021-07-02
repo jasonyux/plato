@@ -8,6 +8,9 @@
 target/
 .vscode
 
+data/stanford/csv
+test
+
 venv
 project/boot/
 project/plugins/project/
