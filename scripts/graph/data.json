@@ -1,0 +1,776 @@
+{
+    "twitter_cont": [
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.pagerank.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 20.4,
+                "memory_usage (mb)": 843.57
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.pagerank.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 18.3,
+                "memory_usage (mb)": 847.4
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.pagerank.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 19.93,
+                "memory_usage (mb)": 851.24
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.pagerank.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 16.28,
+                "memory_usage (mb)": 827.98
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "epoch": 100.0,
+                "filename": "twitter_cont.n2v.1.100.log"
+            },
+            "performance": {
+                "time (s)": 878.88
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "epoch": 100.0,
+                "filename": "twitter_cont.n2v.2.100.log"
+            },
+            "performance": {
+                "time (s)": 454.96
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "epoch": 100.0,
+                "filename": "twitter_cont.n2v.3.100.log"
+            },
+            "performance": {
+                "time (s)": 421.8
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "epoch": 100.0,
+                "filename": "twitter_cont.n2v.4.100.log"
+            },
+            "performance": {
+                "time (s)": 300.55
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.lpa.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 85.89
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.lpa.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 57.96
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.lpa.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 64.89
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "twitter_cont.lpa.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 46.93
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "twitter_cont.kcore.1.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 63.0
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "twitter_cont.kcore.2.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 83.68
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "twitter_cont.kcore.3.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 70.5
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "twitter_cont.kcore.4.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 51.14
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "twitter_cont.fuf.1.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1694.76
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "twitter_cont.fuf.2.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1284.8
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "twitter_cont.fuf.3.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1110.75
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "twitter_cont.fuf.4.100.80.log"
+            },
+            "performance": {
+                "time (s)": 763.75
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "num_samples": 1000.0,
+                "filename": "twitter_cont.cnc.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 1508.03,
+                "vps": 0.67
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "num_samples": 1000.0,
+                "filename": "twitter_cont.cnc.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 904.04,
+                "vps": 1.13
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "num_samples": 1000.0,
+                "filename": "twitter_cont.cnc.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 872.16,
+                "vps": 1.19
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "num_samples": 1000.0,
+                "filename": "twitter_cont.cnc.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 537.65,
+                "vps": 1.93
+            }
+        }
+    ],
+    "web_Google_cont": [
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.pagerank.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 27.5,
+                "memory_usage (mb)": 944.1
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.pagerank.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 20.06,
+                "memory_usage (mb)": 996.08
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.pagerank.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 24.38,
+                "memory_usage (mb)": 905.42
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.pagerank.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 15.76,
+                "memory_usage (mb)": 905.9
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "epoch": 100.0,
+                "filename": "web_Google_cont.n2v.1.100.log"
+            },
+            "performance": {
+                "time (s)": 1394.11
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "epoch": 100.0,
+                "filename": "web_Google_cont.n2v.2.100.log"
+            },
+            "performance": {
+                "time (s)": 825.41
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "epoch": 100.0,
+                "filename": "web_Google_cont.n2v.3.100.log"
+            },
+            "performance": {
+                "time (s)": 891.43
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "epoch": 100.0,
+                "filename": "web_Google_cont.n2v.4.100.log"
+            },
+            "performance": {
+                "time (s)": 582.5
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.lpa.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 189.59
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.lpa.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 132.85
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.lpa.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 126.04
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "web_Google_cont.lpa.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 97.6
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "web_Google_cont.kcore.1.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 56.74
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "web_Google_cont.kcore.2.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 48.9
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "web_Google_cont.kcore.3.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 46.88
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "web_Google_cont.kcore.4.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 23.58
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "web_Google_cont.fuf.1.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1923.12
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "web_Google_cont.fuf.2.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1036.44
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "web_Google_cont.fuf.3.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1138.5
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "web_Google_cont.fuf.4.100.80.log"
+            },
+            "performance": {
+                "time (s)": 903.68
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "num_samples": 1000.0,
+                "filename": "web_Google_cont.cnc.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 3070.22,
+                "vps": 0.34
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "num_samples": 1000.0,
+                "filename": "web_Google_cont.cnc.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 1554.81,
+                "vps": 0.66
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "num_samples": 1000.0,
+                "filename": "web_Google_cont.cnc.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 1470.23,
+                "vps": 0.68
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "num_samples": 1000.0,
+                "filename": "web_Google_cont.cnc.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 713.91,
+                "vps": 1.41
+            }
+        }
+    ],
+    "facebook_combined": [
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.pagerank.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 13.74,
+                "memory_usage (mb)": 276.8
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.pagerank.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 9.42,
+                "memory_usage (mb)": 426.66
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.pagerank.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 13.49,
+                "memory_usage (mb)": 415.52
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.pagerank.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 7.7,
+                "memory_usage (mb)": 408.78
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "epoch": 100.0,
+                "filename": "facebook_combined.n2v.1.100.log"
+            },
+            "performance": {
+                "time (s)": 354.78
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "epoch": 100.0,
+                "filename": "facebook_combined.n2v.2.100.log"
+            },
+            "performance": {
+                "time (s)": 275.68
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "epoch": 100.0,
+                "filename": "facebook_combined.n2v.3.100.log"
+            },
+            "performance": {
+                "time (s)": 277.97
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "epoch": 100.0,
+                "filename": "facebook_combined.n2v.4.100.log"
+            },
+            "performance": {
+                "time (s)": 171.3
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.lpa.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 55.66
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.lpa.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 42.77
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.lpa.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 48.91
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "iterations": 1000.0,
+                "filename": "facebook_combined.lpa.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 32.22
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "facebook_combined.kcore.1.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 10.81
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "facebook_combined.kcore.2.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 4.44
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "facebook_combined.kcore.3.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 6.72
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "kmin": 1.0,
+                "kmax": 10000.0,
+                "filename": "facebook_combined.kcore.4.1.10000.log"
+            },
+            "performance": {
+                "time (s)": 3.43
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "facebook_combined.fuf.1.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1718.97
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "facebook_combined.fuf.2.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1092.2
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "facebook_combined.fuf.3.100.80.log"
+            },
+            "performance": {
+                "time (s)": 1110.83
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "outer_iteration": 100.0,
+                "inner_iteration": 80.0,
+                "filename": "facebook_combined.fuf.4.100.80.log"
+            },
+            "performance": {
+                "time (s)": 934.67
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 1.0,
+                "num_samples": 1000.0,
+                "filename": "facebook_combined.cnc.1.1000.log"
+            },
+            "performance": {
+                "time (s)": 1532.77,
+                "vps": 0.66
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 2.0,
+                "num_samples": 1000.0,
+                "filename": "facebook_combined.cnc.2.1000.log"
+            },
+            "performance": {
+                "time (s)": 843.38,
+                "vps": 1.21
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 3.0,
+                "num_samples": 1000.0,
+                "filename": "facebook_combined.cnc.3.1000.log"
+            },
+            "performance": {
+                "time (s)": 896.12,
+                "vps": 1.14
+            }
+        },
+        {
+            "setup": {
+                "machine_num": 4.0,
+                "num_samples": 1000.0,
+                "filename": "facebook_combined.cnc.4.1000.log"
+            },
+            "performance": {
+                "time (s)": 511.59,
+                "vps": 2.03
+            }
+        }
+    ]
+}
