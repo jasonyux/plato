@@ -5,12 +5,6 @@ import json
 from textwrap import wrap
 from typing import Iterable
 
-# this data comes from the 'measure_all.py' from the Plaot project 
-with open("data.json") as openfile:
-  exp_data = json.load(openfile)
-  print("Avaiable Keys {}".format(exp_data.keys()))
-  data = exp_data["facebook_combined"]
-
 def group_by_algo(data, group_num):
     grouped_data = {}
     for i in range(0, len(data), group_num):
@@ -118,8 +112,15 @@ def plot_all(dataset, grouped_data:dict):
     return
 
 if __name__ == "__main__":
+    # this data comes from the 'measure_all.py' from the Plaot project 
     group_num = 4 # number of data in each group
-    dataset, grouped_data = group_by_algo(data, group_num)
-    plot_all(dataset, grouped_data)
+    with open("data.json") as openfile:
+        exp_data = json.load(openfile)
+        print("Avaiable Keys {}".format(exp_data.keys()))
+        for key in exp_data.keys():
+            print("Plotting {}".format(key))
+            data = exp_data[key]
+            dataset, grouped_data = group_by_algo(data, group_num)
+            plot_all(dataset, grouped_data)
 
 
